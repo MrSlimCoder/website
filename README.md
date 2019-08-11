@@ -1,4 +1,4 @@
-# ArtFreely - Website
+# Freely - Website
 Description coming soon ...
 
 # Nice to know
