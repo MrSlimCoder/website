@@ -1,15 +1,12 @@
-import GenericLayout from '../layouts/Generic'
-import Heading from '../components/Heading'
+import React from 'react';
+import Heading from '../components/Heading';
+import GenericLayout from '../layouts/Generic';
 
 class Landing extends React.Component {
-    constructor(props) {
-        super(props);
-    }
-
     render() {
         return (
             <GenericLayout>
-                <Heading value="Landing / Not Logged In" />
+                <Heading value="Landing / Not Logged In"/>
             </GenericLayout>
         );
     }

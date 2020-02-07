@@ -1,16 +1,14 @@
-import '../scss/main.scss'
+import PropTypes from 'prop-types';
+import React from 'react';
+import '../scss/main.scss';
 
 class GenericLayout extends React.Component {
-    constructor(props) {
-        super(props);
+    static get propTypes() {
+        return {children: PropTypes.node.isRequired};
     }
 
     render() {
-        return (
-            <div>
-                { this.props.children }
-            </div>
-        );
+        return <div>{this.props.children}</div>;
     }
 }
 

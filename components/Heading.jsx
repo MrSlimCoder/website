@@ -1,12 +1,13 @@
+import PropTypes from 'prop-types';
+import React from 'react';
+
 class Heading extends React.Component {
-    constructor(props) {
-        super(props);
+    static get propTypes() {
+        return {value: PropTypes.string.isRequired};
     }
 
     render() {
-        return (
-            <h1>{ this.props.value }</h1>
-        );
+        return <h1>{this.props.value}</h1>;
     }
 }
 

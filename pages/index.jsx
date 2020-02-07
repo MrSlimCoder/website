@@ -1,15 +1,12 @@
-import GenericLayout from '../layouts/Generic'
-import Heading from '../components/Heading'
+import React from 'react';
+import Heading from '../components/Heading';
+import GenericLayout from '../layouts/Generic';
 
 class Home extends React.Component {
-    constructor(props) {
-        super(props);
-    }
-
     render() {
         return (
             <GenericLayout>
-                <Heading value="It Works!" />
+                <Heading value="It Works!"/>
             </GenericLayout>
         );
     }
