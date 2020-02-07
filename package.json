@@ -7,13 +7,14 @@
     "dev:polka": "node index.js",
     "dev:next": "next",
     "build": "next build",
-    "start": "NODE_ENV=production node index.js"
+    "start": "NODE_ENV=production node index.js",
+    "lint": "eslint --ignore-path .gitignore --ext .js,.jsx ."
   },
   "private": true,
   "author": {
-      "name": "Freely",
-      "url": "https://freely.is",
-      "email": "business@freely.is"
+    "name": "Freely",
+    "url": "https://freely.is",
+    "email": "business@freely.is"
   },
   "dependencies": {
     "@zeit/next-sass": "^1.0.1",
@@ -21,8 +22,16 @@
     "next": "^9.2.1",
     "node-sass": "^4.13.1",
     "polka": "^0.5.2",
+    "prop-types": "^15.7.2",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "url-loader": "^2.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-xo-react": "^0.22.0",
+    "eslint-config-xo-space": "^0.22.0",
+    "eslint-plugin-react": "^7.18.3",
+    "eslint-plugin-react-hooks": "^2.3.0"
   }
 }
