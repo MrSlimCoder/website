@@ -1,7 +1,7 @@
 {
   "name": "website",
   "version": "1.0.0",
-  "description": "",
+  "description": "Freely Next.js website",
   "main": "index.js",
   "scripts": {
     "dev:polka": "node index.js",
@@ -9,8 +9,12 @@
     "build": "next build",
     "start": "NODE_ENV=production node index.js"
   },
-  "author": "",
-  "license": "ISC",
+  "private": true,
+  "author": {
+      "name": "Freely",
+      "url": "https://freely.is",
+      "email": "business@freely.is"
+  },
   "dependencies": {
     "@zeit/next-sass": "^1.0.1",
     "file-loader": "^4.2.0",
