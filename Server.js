@@ -7,11 +7,9 @@ class Server {
         this.environment = process.env.NODE_ENV;
         this.inDevelopment = process.env.NODE_ENV !== 'production';
         this.server = polka();
-
-        this._run();
     }
 
-    _run() {
+    init() {
         const app = next({ inDevelopment: this.inDevelopment });
         const nextHandler = app.getRequestHandler();
 
@@ -29,4 +27,4 @@ class Server {
     }
 }
 
-module.exports = new Server();
+module.exports = Server;
