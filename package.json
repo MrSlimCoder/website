@@ -11,18 +11,17 @@
   },
   "private": true,
   "author": {
-      "name": "Freely",
-      "url": "https://freely.is",
-      "email": "business@freely.is"
+    "name": "Freely",
+    "url": "https://freely.is",
+    "email": "business@freely.is"
   },
   "dependencies": {
-    "@zeit/next-sass": "^1.0.1",
     "file-loader": "^4.2.0",
     "next": "^9.2.1",
-    "node-sass": "^4.13.1",
     "polka": "^0.5.2",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
+    "sass": "^1.26.3",
     "url-loader": "^2.1.0"
   }
 }

@@ -1,6 +1,4 @@
-const withSass = require('@zeit/next-sass');
-
-module.exports = withSass({
+module.exports = {
     useFileSystemPublicRoutes: false,
     webpack(config) {
         config.module.rules.push({
@@ -12,4 +10,4 @@ module.exports = withSass({
 
         return config;
     }
-});
+};

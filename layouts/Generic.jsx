@@ -1,5 +1,3 @@
-import '../scss/main.scss'
-
 class GenericLayout extends React.Component {
     constructor(props) {
         super(props);
