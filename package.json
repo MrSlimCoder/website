@@ -4,9 +4,11 @@
   "description": "Freely Next.js website",
   "main": "index.js",
   "scripts": {
+    "build": "next build",
     "dev:polka": "node index.js",
     "dev:next": "next",
-    "build": "next build",
+    "export": "next export",
+    "lint": "echo no linting configured, yell at legend until resolved",
     "start": "NODE_ENV=production node index.js"
   },
   "private": true,
