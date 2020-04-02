@@ -15,27 +15,29 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: '12.16.1'
-      - name: Get yarn cache
-        id: yarn-cache
-        run: echo "::set-output name=dir::$(yarn cache dir)"
+      - name: Get npm cache directory
+        id: npm-cache
+        run: |
+            echo "::set-output name=dir::$(npm config get cache)"
       - name: Cache dependencies
         uses: actions/cache@v1
         with:
-          path: ${{ steps.yarn-cache.outputs.dir }}
-          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          path: ${{ steps.npm-cache.outputs.dir }}
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
-            ${{ runner.os }}-yarn-
-      - name: Install dependencies with Yarn
-        run: yarn install
+            ${{ runner.os }}-node-
+      - name: Install dependencies with npm
+        run: npm ci
       - name: Build for production
-        run: yarn run build
+        run: npm run build
       - name: Export static site
-        run: yarn run export
+        run: npm run-script export
       - name: Upload static site export
         uses: actions/upload-artifact@v1
         with:
           name: exported_site
           path: out
+
   lint:
     name: Lint
 
@@ -48,17 +50,20 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: '12.16.1'
-      - name: Get yarn cache
-        id: yarn-cache
-        run: echo "::set-output name=dir::$(yarn cache dir)"
+      - name: Get npm cache directory
+        id: npm-cache
+        run: |
+            echo "::set-output name=dir::$(npm config get cache)"
       - name: Cache dependencies
         uses: actions/cache@v1
         with:
-          path: ${{ steps.yarn-cache.outputs.dir }}
-          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          path: ${{ steps.npm-cache.outputs.dir }}
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
-            ${{ runner.os }}-yarn-
-      - name: Install dependencies with Yarn
-        run: yarn install
-      - name: Lint
-        run: yarn run lint
+            ${{ runner.os }}-node-
+      - name: Install dependencies with npm
+        run: npm ci
+      - name: lint:js
+        run: npm run-script lint:js
+      - name: lint:style
+        run: npm run-script lint:style
