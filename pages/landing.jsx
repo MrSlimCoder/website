@@ -1,5 +1,5 @@
-import GenericLayout from '../layouts/Generic'
-import Heading from '../components/Heading'
+import GenericLayout from "../layouts/Generic";
+import Heading from "../components/Heading";
 
 class Landing extends React.Component {
     constructor(props) {

@@ -1,5 +1,5 @@
-import '../scss/main.scss'
-import App from 'next/app';
+import "../scss/main.scss";
+import App from "next/app";
 
 // function MyApp({ Component, pageProps }) {
 //   return <Component {...pageProps} />
