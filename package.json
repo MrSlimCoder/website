@@ -57,7 +57,7 @@
       "git add"
     ],
     "*{.scss}": [
-      "stylelint **/*.scss --syntax=scss --cache --allow-empty-input",
+      "stylelint **/*.scss --cache --allow-empty-input",
       "git add"
     ]
   }
