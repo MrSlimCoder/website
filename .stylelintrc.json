@@ -9,6 +9,8 @@
     ],
 
     "rules": {
+        "indentation": "tab",
+
         "function-comma-space-after": "always",
         "function-parentheses-space-inside": "never",
 
