@@ -44,21 +44,10 @@
     }
   },
   "lint-staged": {
-    "*{.js}": [
-      "eslint ./ --cache --ext .js --no-error-on-unmatched-pattern",
-      "git add"
-    ],
-    "*{.jsx}": [
-      "eslint ./ --cache --ext .jsx --no-error-on-unmatched-pattern",
-      "git add"
-    ],
-    "*{.css}": [
-      "stylelint **/*.css --cache --allow-empty-input",
-      "git add"
-    ],
-    "*{.scss}": [
-      "stylelint **/*.scss --cache --allow-empty-input",
-      "git add"
-    ]
+    "*.js": "eslint ./ --cache --ext .js --no-error-on-unmatched-pattern",
+    "*.jsx": "eslint ./ --cache --ext .jsx --no-error-on-unmatched-pattern",
+
+    "*.css": "stylelint **/*.css --cache --allow-empty-input",
+    "*.scss": "stylelint **/*.scss --cache --allow-empty-input"
   }
 }
