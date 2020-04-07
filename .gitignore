@@ -100,7 +100,7 @@ typings/
 # Optional eslint cache
 .eslintcache
 
-# Optiona stylelint cache
+# Optional stylelint cache
 .stylelintcache
 
 # Optional REPL history
