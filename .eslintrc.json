@@ -35,9 +35,8 @@
 		"react/prop-types": "off",
 		"react/react-in-jsx-scope": "off",
 
-		"no-var": "error",
 		"semi": "error",
-		"indent": ["error", 4],
+		"no-var": "error",
 		"prefer-const": "error",
 		"keyword-spacing": "error",
 		"eqeqeq": ["error", "always"],
@@ -50,6 +49,11 @@
 
 		"quotes": ["error", "double", {
 			"allowTemplateLiterals": true
+		}],
+
+		"indent": ["error", "tab", {
+			"SwitchCase": 1,
+			"flatTernaryExpressions": true
 		}],
 
 		"object-curly-newline": ["error", {
