@@ -1,53 +1,53 @@
 {
-  "name": "website",
-  "version": "0.0.1",
-  "description": "Freely Next.js website",
-  "main": "index.js",
-  "scripts": {
-    "build": "next build",
-    "dev:polka": "node index.js",
-    "dev:next": "next",
-    "export": "next export",
-    "lint:js": "eslint --ext .js --ext .jsx ./ --no-error-on-unmatched-pattern && echo \"\u001b[1m\u001b[32mOK - lint:js\u001b[39m\u001b[22m\" || echo \"\u001b[1m\u001b[31mNot OK - lint:js\u001b[39m\u001b[22m\"",
-    "lint:style": "stylelint **/*.css **/*.scss --allow-empty-input && echo \"\u001b[1m\u001b[32mOK - lint:style\u001b[39m\u001b[22m\" || echo \"\u001b[1m\u001b[31mNot OK - lint:style\u001b[39m\u001b[22m\"",
-    "start": "NODE_ENV=production node index.js"
-  },
-  "private": true,
-  "author": {
-    "name": "Freely",
-    "url": "https://freely.is",
-    "email": "business@freely.is"
-  },
-  "dependencies": {
-    "file-loader": "^4.2.0",
-    "next": "^9.3.2",
-    "polka": "^0.5.2",
-    "react": "^16.9.0",
-    "react-dom": "^16.9.0",
-    "sass": "^1.26.3",
-    "url-loader": "^2.1.0"
-  },
-  "devDependencies": {
-    "eslint": "^6.8.0",
-    "eslint-plugin-jsdoc": "^22.1.0",
-    "eslint-plugin-jsx-a11y": "^6.2.3",
-    "eslint-plugin-react": "^7.19.0",
-    "husky": "^4.2.3",
-    "lint-staged": "^10.1.1",
-    "stylelint": "^13.2.1",
-    "stylelint-config-sass-guidelines": "^7.0.0",
-    "stylelint-config-standard": "^20.0.0"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "*.js": "eslint ./ --cache --ext .js --no-error-on-unmatched-pattern",
-    "*.jsx": "eslint ./ --cache --ext .jsx --no-error-on-unmatched-pattern",
-
-    "*.css": "stylelint **/*.css --cache --allow-empty-input",
-    "*.scss": "stylelint **/*.scss --cache --allow-empty-input"
-  }
+	"name": "website",
+	"version": "0.0.1",
+	"description": "Freely Next.js website",
+	"main": "index.js",
+	"scripts": {
+		"build": "next build",
+		"dev:polka": "node index.js",
+		"dev:next": "next",
+		"export": "next export",
+		"lint:js": "eslint --ext .js --ext .jsx ./ --no-error-on-unmatched-pattern && echo \"\u001b[1m\u001b[32mOK - lint:js\u001b[39m\u001b[22m\" || echo \"\u001b[1m\u001b[31mNot OK - lint:js\u001b[39m\u001b[22m\"",
+		"lint:style": "stylelint **/*.css **/*.scss --allow-empty-input && echo \"\u001b[1m\u001b[32mOK - lint:style\u001b[39m\u001b[22m\" || echo \"\u001b[1m\u001b[31mNot OK - lint:style\u001b[39m\u001b[22m\"",
+		"start": "NODE_ENV=production node index.js"
+	},
+	"private": true,
+	"author": {
+		"name": "Freely",
+		"url": "https://freely.is",
+		"email": "business@freely.is"
+	},
+	"dependencies": {
+		"file-loader": "^4.2.0",
+		"next": "^9.3.2",
+		"polka": "^0.5.2",
+		"react": "^16.9.0",
+		"react-dom": "^16.9.0",
+		"sass": "^1.26.3",
+		"url-loader": "^2.1.0"
+	},
+	"devDependencies": {
+		"eslint": "^6.8.0",
+		"eslint-plugin-jsdoc": "^22.1.0",
+		"eslint-plugin-jsx-a11y": "^6.2.3",
+		"eslint-plugin-react": "^7.19.0",
+		"husky": "^4.2.3",
+		"lint-staged": "^10.1.1",
+		"stylelint": "^13.2.1",
+		"stylelint-config-sass-guidelines": "^7.0.0",
+		"stylelint-config-standard": "^20.0.0"
+	},
+	"husky": {
+		"hooks": {
+			"pre-commit": "lint-staged"
+		}
+	},
+	"lint-staged": {
+		"*.js": "eslint ./ --cache --ext .js --no-error-on-unmatched-pattern",
+		"*.jsx": "eslint ./ --cache --ext .jsx --no-error-on-unmatched-pattern",
+		
+		"*.css": "stylelint **/*.css --cache --allow-empty-input",
+		"*.scss": "stylelint **/*.scss --cache --allow-empty-input"
+	}
 }
