@@ -3,6 +3,34 @@ name: CI
 on: [push, pull_request]
 
 jobs:
+  test:
+    name: Test
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout git repository
+        uses: actions/checkout@v2
+      - name: Setup Node.js for use with Actions
+        uses: actions/setup-node@v1
+        with:
+          node-version: '12.16.3'
+      - name: Get npm cache directory
+        id: npm-cache
+        run: |
+            echo "::set-output name=dir::$(npm config get cache)"
+      - name: Cache dependencies
+        uses: actions/cache@v1
+        with:
+          path: ${{ steps.npm-cache.outputs.dir }}
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+      - name: Install dependencies with npm
+        run: npm ci
+      - name: Run tests
+        run: npm run-script test:ci
+
   build:
     name: Build
 
@@ -14,7 +42,7 @@ jobs:
       - name: Setup Node.js for use with Actions
         uses: actions/setup-node@v1
         with:
-          node-version: '12.16.1'
+          node-version: '12.16.3'
       - name: Get npm cache directory
         id: npm-cache
         run: |
@@ -49,7 +77,7 @@ jobs:
       - name: Setup Node.js for use with Actions
         uses: actions/setup-node@v1
         with:
-          node-version: '12.16.1'
+          node-version: '12.16.3'
       - name: Get npm cache directory
         id: npm-cache
         run: |

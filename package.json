@@ -10,6 +10,9 @@
 		"export": "next export",
 		"lint:js": "eslint --ext .js --ext .jsx ./ --no-error-on-unmatched-pattern && echo \"\u001b[1m\u001b[32mOK - lint:js\u001b[39m\u001b[22m\" || echo \"\u001b[1m\u001b[31mNot OK - lint:js\u001b[39m\u001b[22m\"",
 		"lint:style": "stylelint **/*.css **/*.scss --allow-empty-input && echo \"\u001b[1m\u001b[32mOK - lint:style\u001b[39m\u001b[22m\" || echo \"\u001b[1m\u001b[31mNot OK - lint:style\u001b[39m\u001b[22m\"",
+		"test": "jest --onlyChanged --passWithNoTests",
+		"test:ci": "jest --ci --all --passWithNoTests",
+		"test:update": "jest --onlyChanged --updateSnapshot",
 		"start": "NODE_ENV=production node index.js"
 	},
 	"private": true,
@@ -28,16 +31,21 @@
 		"url-loader": "^4.1.0"
 	},
 	"devDependencies": {
+		"babel-jest": "^25.5.1",
 		"eslint": "^6.8.0",
+		"eslint-plugin-jest": "^23.9.0",
 		"eslint-plugin-jsdoc": "^24.0.2",
 		"eslint-plugin-jsx-a11y": "^6.2.3",
 		"eslint-plugin-react": "^7.19.0",
 		"husky": "^4.2.5",
+		"jest": "^25.5.4",
 		"lint-staged": "^10.2.2",
+		"react-test-renderer": "^16.13.1",
 		"stylelint": "^13.3.3",
 		"stylelint-config-sass-guidelines": "^7.0.0",
 		"stylelint-config-standard": "^20.0.0"
 	},
+	"browserslist": "defaults, not IE 11, not dead",
 	"husky": {
 		"hooks": {
 			"pre-commit": "lint-staged"
